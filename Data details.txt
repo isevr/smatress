@@ -1,0 +1,42 @@
+Test bed setup:
+
+On one bed 2 devices are installed:
+- A grid of pressure sensing material 8x16 (8 colums, 16 lines - the bed height) that reads teh pressure every 2 minutes (file: Pressure.xlsx)
+- A pneumatic sensor (WIthings Sleep Analyzer) that read the heart rate and breathing, the following data are recorded / calculated by the Sleep Device.
+  file: Withings_Data.csv the following data are captured.
+
+https://developer.withings.com/api-reference/#tag/sleep/operation/sleepv2-getsummary
+
+
+Time spent awake (in seconds).
+Number of times the user woke up while in bed. Does not include the number of times the user got out of bed.
+Duration in state REM sleep (in seconds)
+Total time spent in bed.
+Total time spent asleep. Sum of light, deep and rem durations
+Ratio of the total sleep time over the time spent in bed
+Time spent in bed before falling asleep.
+Time spent in bed after waking up.
+Time spent awake in bed after falling asleep for the 1st time during the night.
+Count of the REM sleep phases.
+Number of times the user got out of bed during the night.
+Duration in state light sleep (in seconds).
+Duration in state deep sleep (in seconds).
+Minimal heart rate.
+Maximal heart rate.
+Average respiration rate.
+Minimal respiration rate.
+Maximal respiration rate.
+Total snoring time
+Numbers of snoring episodes of at least one minute
+Average heart rate.
+
+
+In order to corellate the data use :
+
+Pressure.xlsx - Date 
+Withings_Data.csv - Start Date - End Date.
+
+The data are not one to one, so the proper methodology should be used for,
+e.g.  Spearman Correlation and Kendall Correlation (just a suggestion)
+
+
